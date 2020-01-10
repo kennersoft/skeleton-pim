@@ -1,0 +1,30 @@
+{
+  "name": "treolabs/skeleton-pim",
+  "description": "Skeleton for TreoPIM",
+  "homepage": "https://treopim.com",
+  "license": "GPL-3.0-only",
+  "minimum-stability": "stable",
+  "require": {
+    "treolabs/treocore": "^3.25.0",
+    "treolabs/multi-languages": "*",
+    "treolabs/pim": "*"
+  },
+  "scripts": {
+     "pre-update-cmd": "ComposerCmd::preUpdate",
+     "post-update-cmd": "ComposerCmd::postUpdate",
+     "post-package-install": "ComposerCmd::postPackageInstall",
+     "post-package-update": "ComposerCmd::postPackageUpdate",
+     "pre-package-uninstall": "ComposerCmd::prePackageUninstall"
+  },
+  "autoload": {
+     "classmap": [
+         "composer-cmd.php"
+     ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.treopim.com/packages.json?id=public"
+    }
+  ]
+}
